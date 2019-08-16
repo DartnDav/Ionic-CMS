@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item *ngIf="!user">
+    <ion-label text-center>
+      <ion-spinner></ion-spinner>
+    </ion-label>
+  </ion-item>
+
+  <ion-list *ngIf="user">
+    <ion-input [(ngModel)]="user._id" name="_id" type="hidden"></ion-input>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="user.email" name="email" type="email"></ion-input>
+      <div *ngIf="errors.email"> {{ errors.email }} </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input [(ngModel)]="user.username" name="username" type="text"></ion-input>
+      <div *ngIf="errors.username"> {{ errors.username }} </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input [(ngModel)]="user.first_name" name="first_name" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input [(ngModel)]="user.last_name" name="last_name" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-button color="primary" expand="full" (click)="onSubmit()">Submit</ion-button>
+</ion-content>

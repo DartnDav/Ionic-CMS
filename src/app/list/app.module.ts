@@ -14,6 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { UsersService } from './users.service';
 import { AuthService } from './auth.service';
 
+import { CookieService } from 'ngx-cookie-service';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -26,6 +28,7 @@ import { AuthService } from './auth.service';
   providers: [
     StatusBar,
     SplashScreen,
+    CookieService,
     UsersService,
     AuthService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
