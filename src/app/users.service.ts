@@ -55,10 +55,3 @@ export class UsersService {
     return this.http.delete<User>(`${this.url}/${id}`);
   }
 }
-
-
-//   deleteUser (id: string): Observable<User> {
-//     return this.http.delete<User>(`${this.url}/${id}`);
-//   }
-
-// }

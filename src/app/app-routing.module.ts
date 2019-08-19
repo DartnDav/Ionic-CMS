@@ -24,7 +24,11 @@ const routes: Routes = [
   { path: 'user-create', loadChildren: './user-create/user-create.module#UserCreatePageModule' },
   { path: 'user-edit/:id', loadChildren: './user-edit/user-edit.module#UserEditPageModule' },
   { path: 'user-delete/:id', loadChildren: './user-delete/user-delete.module#UserDeletePageModule' },
-  { path: 'user-delete', loadChildren: './user-delete/user-delete.module#UserDeletePageModule' }
+  { path: 'user-delete', loadChildren: './user-delete/user-delete.module#UserDeletePageModule' },
+  { path: 'articles', loadChildren: './articles/articles.module#ArticlesPageModule' },
+  { path: 'article-create', loadChildren: './article-create/article-create.module#ArticleCreatePageModule' },
+  { path: 'article-edit', loadChildren: './article-edit/article-edit.module#ArticleEditPageModule' },
+  { path: 'article-view', loadChildren: './article-view/article-view.module#ArticleViewPageModule' }
 ];
 
 @NgModule({
